@@ -45,5 +45,7 @@ group :development, :test do
   # Gems needed for ActiveAdmin
   gem 'activeadmin', github: 'activeadmin'
   gem 'devise'
+  gem 'country_select', github: 'stefanpenner/country_select'
+  
 end
 
