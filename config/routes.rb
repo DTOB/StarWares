@@ -1,14 +1,19 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :orders
+  
+  get 'products' => 'products#index'
 
-  resources :line_items
+  get 'products/:id' => 'products#show', as: 'product', id: /\d+/
 
-  resources :products
+  # resources :orders
 
-  resources :provinces
-  resources :customers
+  # resources :line_items
+
+  # resources :products
+
+  # resources :provinces
+  # resources :customers
 
   root 'welcome#index'
 
