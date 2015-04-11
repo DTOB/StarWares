@@ -1,7 +1,5 @@
 class WelcomeController < ApplicationController
-
   def index
-    #@provinces = Province.all
+    # @provinces = Province.all
   end
-
 end
