@@ -55,5 +55,5 @@ group :development, :test do
   gem 'carrierwave'
 
   # Mini_Magik
-  gem 'mini_magik'
+  gem 'mini_magick'
 end
