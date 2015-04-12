@@ -1,0 +1,14 @@
+<div class="product">
+  <h2><%= link_to product.model, product %></h2>
+
+  <p><strong>Price: </strong> <%= number_to_currency product.price %></p>
+
+  <h3>Description</h3>
+  <div class="description"> <%= product.description %></div>
+
+  <p><strong>Quantity On Hand: </strong> <%= product.stock_quantity %></p>
+
+  <% if product.image.present? %>
+    <p><%= image_tag product.image, width: 300 %></p>
+  <% end %>
+</div>
