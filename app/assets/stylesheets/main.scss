@@ -8,11 +8,40 @@ $title_size: 36px;
 
   header{
     background-color:black;
+
     h1{
       font-size: $title_size;
       color:black;
       text-shadow: 0px 5px 3px white;
+    }
 
+    nav{
+      ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+
+        li{
+          text-decoration:none;
+          display:inline;
+        }
+      }
+    }
+  }  
+
+  footer{
+    nav{
+      ul{
+        text-align:center;
+        list-style-type:none;
+        margin:0;
+        padding:0;
+
+        li{
+          text-decoration:none;
+          display:inline;
+        }
+      }
     }
   }
 }

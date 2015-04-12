@@ -50,4 +50,10 @@ group :development, :test do
 
   # Rubocop
   gem 'rubocop'
+
+  # Carrierwave
+  gem 'carrierwave'
+
+  # Mini_Magik
+  gem 'mini_magik'
 end
