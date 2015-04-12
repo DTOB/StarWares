@@ -14,20 +14,6 @@
  *= require_self
  */
 
-#container {
-  width:1024px;
-  border: 5px solid black;
-  margin: 0px auto;
-  padding:20px;
-
-  header {
-    font-size:36px;
-  }
-  h1 {
-    font-size:36px;
-  }
-}
-
 
 
 
