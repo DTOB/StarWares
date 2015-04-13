@@ -20,7 +20,7 @@ class CustomerLoginController < ApplicationController
   def destroy
     @_current_customer = session[:current_customer_id] = nil
     flash[:notice] = "You have been logged out"
-    redirect_to products_path
+    redirect_to root_path
   end
 
 
