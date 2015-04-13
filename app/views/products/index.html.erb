@@ -1,5 +1,5 @@
-<h1>All Products</h1>
+<h1>All products</h1>
 
 <p>Products Table Size: <%= @products.size() %></p>
 
-<%= render @products %>
+<%= render partial: "product", locals: {all: @all}, collection: @products %>

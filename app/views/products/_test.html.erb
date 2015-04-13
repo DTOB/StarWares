@@ -1,4 +1,5 @@
 <div class="product">
+
   <h2><%= link_to product.model, product %></h2>
 
   <p><strong>Price: </strong> <%= number_to_currency product.price %></p>
@@ -13,4 +14,5 @@
   <% else %>
     <p><%= image_tag product.image.large %></p>
   <% end %>
+
 </div>
