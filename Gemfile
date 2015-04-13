@@ -56,4 +56,5 @@ group :development, :test do
 
   # Mini_Magik
   gem 'mini_magick'
+
 end
