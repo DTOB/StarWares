@@ -1,12 +1,10 @@
 <h1>All products</h1>
 
-<p>Products Table Size: <%= @products.size() %></p>
+<p>Number of products available: <%= @products.size() %></p>
 
-<%= form_tag(products_path, method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div id="search">
+  <%= render partial: "shared/search" %>
+</div>
 
 <%= render partial: "product", locals: {all: @all}, collection: @products %>
 

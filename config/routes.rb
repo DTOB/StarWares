@@ -14,7 +14,11 @@ Rails.application.routes.draw do
 
   post 'logout' => 'customer_login#destroy'
 
-  get 'search/:id' => 'products#search', id: /\d+/
+  post 'search' => 'products#search', as: 'search'
+
+  # get 'search/:id' => 'products#search', id: /\d+/
+
+  # get 'search'
 
   # get 'products/:model' => 'products#search', name: 
 

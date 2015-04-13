@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
+
     @products = Product.all
     @all = true
   end
@@ -11,7 +12,7 @@ class ProductsController < ApplicationController
   end
 
   def search
-    @product = Product.find(params[:id])
+    @products = Product.search(params[:search])
   end
 
   private
