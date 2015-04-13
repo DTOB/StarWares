@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   post 'logout' => 'customer_login#destroy'
 
+  get 'search/:id' => 'products#search', id: /\d+/
+
+  # get 'products/:model' => 'products#search', name: 
+
   # resources :orders
 
   # resources :line_items
