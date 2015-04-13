@@ -8,6 +8,8 @@ $title_size: 36px;
 
   header{
     background-color:black;
+    height:100px;
+    padding:20px;
 
     h1{
       font-size: $title_size;
@@ -28,9 +30,18 @@ $title_size: 36px;
       }
     }
 
-    #welcome, #status{
+    #welcome{
       float:right;
 
+    }
+
+    #status{
+      position:absolute;
+      top:20px;
+      
+      h4{
+        color:red;
+      }
     }
 
 

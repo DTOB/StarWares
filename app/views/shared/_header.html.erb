@@ -1,16 +1,16 @@
 <header>
-  
-  <div id="welcome">
-    <% unless session[:current_customer_id].nil? %>
-      <h3>Welcome <%= Customer.find(session[:current_customer_id]).name %></h3>
-      <%= button_to "Logout", logout_path %>
-    <% end %>
-  </div>
   <div id="status">
     <% if session[:current_customer_id].nil? %>
       <h4><%= flash[:notice] %></h4>
     <% else %>
       <h4><%= flash[:notice] %> </h4>
+    <% end %>
+  </div>
+
+  <div id="welcome">
+    <% unless session[:current_customer_id].nil? %>
+      <h3>Welcome <%= Customer.find(session[:current_customer_id]).name %></h3>
+      <%= button_to "Logout", logout_path %>
     <% end %>
   </div>
 

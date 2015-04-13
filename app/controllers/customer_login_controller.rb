@@ -13,14 +13,14 @@ class CustomerLoginController < ApplicationController
     @customer = Customer.find(params[:id])
     session[:current_customer_id] = @customer.id
     flash[:notice] = "You have been logged in"
-    redirect_to root_url
+    redirect_to products_path
     
   end
 
   def destroy
     @_current_customer = session[:current_customer_id] = nil
     flash[:notice] = "You have been logged out"
-    redirect_to root_url
+    redirect_to products_path
   end
 
 

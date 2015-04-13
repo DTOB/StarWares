@@ -1,5 +1,9 @@
 <div class="product">
-  <h2><%= link_to product.model, product %></h2>
+  <% if @all == true %>
+    <h2><%= link_to product.model, product %></h2>
+  <% else %>
+    <h2><%= product.model %></h2>
+  <% end %>
 
   <p><strong>Price: </strong> <%= number_to_currency product.price %></p>
 
