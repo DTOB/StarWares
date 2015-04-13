@@ -6,6 +6,14 @@ Rails.application.routes.draw do
 
   get 'products/:id' => 'products#show', as: 'product', id: /\d+/
 
+  post 'products/:id' => 'cart#show'
+
+  get 'customer_login' => 'customer_login#index'
+
+  get 'customer_login/:id' => 'customer_login#create', as: 'customer', id: /\d+/
+
+  post 'logout' => 'customer_login#destroy'
+
   # resources :orders
 
   # resources :line_items

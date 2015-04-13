@@ -1,9 +1,26 @@
 <header>
+  
+  <div id="welcome">
+    <% unless session[:current_customer_id].nil? %>
+      <h3>Welcome <%= Customer.find(session[:current_customer_id]).name %></h3>
+      <%= button_to "Logout", logout_path %>
+    <% end %>
+  </div>
+  <div id="status">
+    <% if session[:current_customer_id].nil? %>
+      <h4><%= flash[:notice] %></h4>
+    <% else %>
+      <h4><%= flash[:notice] %> </h4>
+    <% end %>
+  </div>
+
   <h1>Star Wares</h1>
+
   <nav>
     <ul>
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Products", products_path %></li>
+      <li><%= link_to "Customer Login", customer_login_path %></li>
       <li><%= link_to "Admin", admin_root_path %></li>
     </ul>
   </nav>
