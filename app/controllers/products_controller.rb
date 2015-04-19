@@ -15,6 +15,14 @@ class ProductsController < ApplicationController
     @products = Product.search(params[:search])
   end
 
+  def jedi
+    @products = Product.jedi(params[:jedi])
+  end
+
+  def search_jedis
+    @products = Product.search_jedis(params[:search])
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

@@ -1,5 +1,12 @@
+<%= button_to "View Only Jedis", jedi_path %>
+
 <%= form_tag search_path do %>
   <%= text_field_tag :search, params[:search], :id => 'search_field' %>
-  <%= submit_tag "Search", :model => nil %> 
+  <%= submit_tag "Search All", :model => nil %> 
+<% end %> 
+
+<%= form_tag search_jedis_path do %>
+  <%= text_field_tag :search, params[:search], :id => 'search_jedis_field' %>
+  <%= submit_tag "Search Jedis", :model => nil %> 
 <% end %> 
 

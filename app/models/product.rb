@@ -5,9 +5,16 @@ class Product < ActiveRecord::Base
   mount_uploader :image, ProductImageUploader
 
   def self.search(search)
-    #word = 'Darth'
     where('lower(model) like ?', "%#{search.downcase}%")
+  end
 
+  def self.jedi(jedi)
+    where(jedi: true)
+  end
+
+  def self.search_jedis(search)
+    where('lower(model) like ?', "%#{search.downcase}%").
+    where(jedi: true)
   end
 
 end

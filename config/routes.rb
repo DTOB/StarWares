@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
   post 'search' => 'products#search', as: 'search'
 
+  post 'jedi' => 'products#jedi', as: 'jedi'
+
+  post 'search_jedis' => 'products#search_jedis', as: 'search_jedis'
+
   # get 'search/:id' => 'products#search', id: /\d+/
 
   # get 'search'
