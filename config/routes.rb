@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'about#about'
 
-  get 'contact' => 'contact#contact'
+  #get 'contact' => 'contact#contact'
 
   post 'logout' => 'customer_login#destroy'
 
@@ -24,11 +24,9 @@ Rails.application.routes.draw do
 
   post 'search_jedis' => 'products#search_jedis', as: 'search_jedis'
 
-  # get 'search/:id' => 'products#search', id: /\d+/
+  get 'contacts' => 'contacts#new'
 
-  # get 'search'
-
-  # get 'products/:model' => 'products#search', name: 
+  resources "contacts", only: [:new, :create]
 
   # resources :orders
 

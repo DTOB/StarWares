@@ -57,4 +57,11 @@ group :development, :test do
   # Mini_Magik
   gem 'mini_magick'
 
+  # gems for contact page
+  gem 'mail_form'
+  gem 'simple_form'
+
+  # acts as shopping cart
+  gem 'acts_as_shopping_cart', '~> 0.2.1'
+
 end
