@@ -64,4 +64,7 @@ group :development, :test do
   # acts as shopping cart
   gem 'acts_as_shopping_cart', '~> 0.2.1'
 
+  # Kaminari
+  gem 'kaminari'
+
 end

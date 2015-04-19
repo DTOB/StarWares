@@ -1,13 +1,26 @@
-<%= button_to "View Only Jedis", jedi_path %>
-<%= button_to "View All Models", products_path %>
+<ul>
+  <li>
+    <%= button_to "View Only Jedis", jedi_path %>
+    <%= button_to "View All Models", products_path %>
+  </li>
+  <li>
+    <%= form_tag search_path do %>
+      <%= text_field_tag :search, params[:search], :id => 'search_field' %>
+      <%= submit_tag "Search All", :model => nil %> 
+    <% end %> 
 
-<%= form_tag search_path do %>
-  <%= text_field_tag :search, params[:search], :id => 'search_field' %>
-  <%= submit_tag "Search All", :model => nil %> 
-<% end %> 
+    <%= form_tag search_jedis_path do %>
+      <%= text_field_tag :search, params[:search], :id => 'search_jedis_field' %>
+      <%= submit_tag "Search Jedis", :model => nil %> 
+    <% end %> 
+  </li>
+  <li>
+    <%= link_to "Sort By Price - Highest to Lowest", sort_price_high_low_path %>
+    <%= link_to "Sort By Price - Lowest to Highest", sort_price_low_high_path %>
+    <%= link_to "Sort By Model - A to Z", sort_model_a_z_path %>
+    <%= link_to "Sort By Model - Z to A", sort_model_z_a_path %>
+  </li>
+</ul>
 
-<%= form_tag search_jedis_path do %>
-  <%= text_field_tag :search, params[:search], :id => 'search_jedis_field' %>
-  <%= submit_tag "Search Jedis", :model => nil %> 
-<% end %> 
+<p>Number of products available: <%= @products.size() %></p>
 

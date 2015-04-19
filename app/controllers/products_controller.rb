@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
   end
 
   def sort_price_high_low
-    @products = Product.all.order(price: :desc)
+    #@products = products.all.order(price: :desc)
     @all = true
   end
 

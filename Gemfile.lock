@@ -259,6 +259,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   mail_form
   mini_magick
   rails (= 4.2.0)
