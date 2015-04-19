@@ -1,1 +1,9 @@
-<%= render @products %>
+<h1>Jedis Only</h1>
+
+<p>Number of products available: <%= @products.size() %></p>
+
+<div id="search">
+  <%= render partial: "shared/search" %>
+</div>
+
+<%= render partial: "product", locals: {all: @all}, collection: @products %>

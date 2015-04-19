@@ -1,4 +1,9 @@
 <div class="product">
+<%= link_to "Sort By Price - Highest to Lowest", sort_price_high_low_path %>
+<%= link_to "Sort By Price - Lowest to Highest", sort_price_low_high_path %>
+<%= link_to "Sort By Model - A to Z", sort_model_a_z_path %>
+<%= link_to "Sort By Model - Z to A", sort_model_z_a_path %>
+
   <% if @all == true %>
     <h2><%= link_to product.model, product %></h2>
   <% else %>

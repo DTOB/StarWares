@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
-  get 'products' => 'products#index'
+  get 'products' => 'products#index', as: 'products'
+
+  post 'products' => 'products#index'
 
   get 'products/:id' => 'products#show', as: 'product', id: /\d+/
 
@@ -18,13 +20,21 @@ Rails.application.routes.draw do
 
   post 'logout' => 'customer_login#destroy'
 
-  post 'search' => 'products#search', as: 'search'
+  post 'search' => 'products#search'
 
-  post 'jedi' => 'products#jedi', as: 'jedi'
+  post 'jedi' => 'products#jedi'
 
-  post 'search_jedis' => 'products#search_jedis', as: 'search_jedis'
+  post 'search_jedis' => 'products#search_jedis'
 
   get 'contacts' => 'contacts#new'
+
+  get 'sort_price_high_low' => 'products#sort_price_high_low'
+
+  get 'sort_price_low_high' => 'products#sort_price_low_high'
+
+  get 'sort_model_a_z' => 'products#sort_model_a_z'
+
+  get 'sort_model_z_a' => 'products#sort_model_z_a'
 
   resources "contacts", only: [:new, :create]
 
