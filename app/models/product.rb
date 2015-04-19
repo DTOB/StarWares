@@ -10,10 +10,4 @@ class Product < ActiveRecord::Base
 
   end
 
-#{}"%#{word}%"
 end
-
-#def self.search(search)
- #   word = "'" + search + "'"
- #   where('model ILIKE ?', '%#{word}%')
-  #end
