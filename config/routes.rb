@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 
   get 'customer_login/:id' => 'customer_login#create', as: 'customer', id: /\d+/
 
+  get 'about' => 'about#about'
+
+  get 'contact' => 'contact#contact'
+
   post 'logout' => 'customer_login#destroy'
 
   post 'search' => 'products#search', as: 'search'
